@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
-
+import Navbar from '../User/Navbar'
 const CommunityList = () => {
     const [communities, setCommunities] = useState([]);
     const [name, setName] = useState('');
@@ -42,6 +42,8 @@ const CommunityList = () => {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="container mx-auto p-4">
             {/* Create Community Form */}
             <h2 className="text-2xl font-bold mb-4">Create a New Community</h2>
@@ -90,6 +92,7 @@ const CommunityList = () => {
             {/* Display message */}
             {message && <div className="alert alert-info mt-3 text-green-600">{message}</div>}
         </div>
+        </>
     );
 };
 

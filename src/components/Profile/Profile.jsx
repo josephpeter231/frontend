@@ -104,7 +104,7 @@ function Profile() {
                         <img
                           src={user.imageUrl}
                           alt="Profile"
-                          className="img-fluid rounded-circle ml-[0px]"
+                          className="img-fluid rounded-circle ml-[190px]"
                           style={{ width: '150px', height: '150px', objectFit: 'cover' }}
                         />
                       ) : (

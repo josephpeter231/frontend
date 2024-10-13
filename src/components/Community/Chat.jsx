@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './CommunityChat.css'; // Import the CSS file
+import './CommunityChat.css'; 
+import Navbar from '../User/Navbar'
 
 const CommunityChat = () => {
     const { id: communityId } = useParams();
@@ -12,7 +13,7 @@ const CommunityChat = () => {
     const [users, setUsers] = useState([]);
     const [participants, setParticipants] = useState([]);
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [viewParticipantsModalIsOpen, setViewParticipantsModalIsOpen] = useState(false); // New state for view participants modal
+    const [viewParticipantsModalIsOpen, setViewParticipantsModalIsOpen] = useState(false); 
 
     useEffect(() => {
         const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -132,6 +133,8 @@ const CommunityChat = () => {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="chat-container">
             <h2 className="text-xl font-bold">Community Chat</h2>
             <button className="btn btn-secondary" onClick={toggleModal}>
@@ -222,6 +225,7 @@ const CommunityChat = () => {
                 </div>
             )}
         </div>
+        </>
     );
 };
 
