@@ -1,0 +1,38 @@
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.message-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.message-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.my-message {
+    background-color: #e6f7ff;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 10px;
+}
